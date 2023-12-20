@@ -1,0 +1,14 @@
+= My Dart and Flutter Cookbook
+:doctype: book
+:publication-type: book
+:toc: left
+:toclevels: 4
+:source-highlighter: highlight.js
+:source-language: adoc
+:icons: font
+:stem: <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+:sectnums:
+:sectnumlevels: 4
+
+include::1-Installation.adoc[]

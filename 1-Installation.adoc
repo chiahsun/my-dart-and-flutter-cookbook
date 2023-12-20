@@ -1,0 +1,67 @@
+
+== https://docs.flutter.dev/get-started/install[Install the Flutter SDK]
+
+=== https://docs.flutter.dev/get-started/install/macos[Installation on Mac]
+
+[source,bash]
+----
+# For apple silicon
+sudo softwareupdate --install-rosetta --agree-to-license
+curl -LO https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.16.4-stable.zip
+unzip flutter_macos_arm64_3.16.4-stable.zip
+----
+
+[source,bash]
+----
+echo $(PWD)/flutter/bin
+----
+
+Append following lines to `.zshrc`
+[source,bash]
+----
+ # https://docs.flutter.dev/get-started/install/macos#update-your-path
+ export PATH="$PATH:$HOME/git/my-dart-and-flutter-cookbook/flutter/bin"
+----
+
+Open a new shell or `source ~/.zshrc`
+
+[source,bash]
+flutter doctor
+
+==== Setup Android Development Environment
+
+Install https://developer.android.com/studio?hl=zh-tw[Android Studio]
+
+Then check the https://docs.flutter.dev/get-started/install/macos#android-setup[setup guide]
+
+* If missing command line tools for Android, then install them as following:
+
+1. Check you sdk manager location. Android Studio > Tools > SDK Manager
+2. Languages & Frameworks > Android SDK > SDK tools
+3. Check `Android SDK Command-line Tools (latest)`, then install it
+
+* Accept license by `flutter doctor --android-licenses`
+
+==== Setup iOS and macOS Development Environment
+
+If CocoaPods not installed. See https://guides.cocoapods.org/using/getting-started.html#installation[guide].
+
+Add the following lines to your `.zshrc`
+[source, bash]
+----
+ # https://guides.cocoapods.org/using/getting-started.html#installation
+ export GEM_HOME=$HOME/.gem
+ export PATH=$GEM_HOME/bin:$PATH
+----
+
+Install the cocoapods
+
+[source,bash]
+----
+gem install cocoapods --user-install
+gem which cocoapods
+----
+
+==== End Check
+
+After all the above get finished, open a new shell and run `flutter doctor` again, you should see `• No issues found!`
