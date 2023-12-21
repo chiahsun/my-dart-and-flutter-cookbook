@@ -3,9 +3,6 @@ flutter/
 .idea/
 *.html
 
-# Ignore dark.css from https://github.com/darshandsoni/asciidoctor-skins
-dark.css
-
 # The following are ignores for the dart languages
 # See https://www.dartlang.org/guides/libraries/private-files
 
