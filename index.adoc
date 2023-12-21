@@ -12,3 +12,9 @@
 :sectnumlevels: 4
 
 include::1-Installation.adoc[]
+
+[discrete]
+= Part I: The Dart Programming Language
+include::2-DartLanguageTour.adoc[]
+
+
