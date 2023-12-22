@@ -3,3 +3,76 @@
 
 [source, bash]
 flutter create namer_app
+
+Under `name_app`
+[source, bash]
+flutter run
+
+and choose your development target (e.g. MacOS).
+
+----
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+----
+
+Edit the file `lib/main.dart`
+
+
+[source,dart]
+----
+// Change the color and press r to hotreload
+colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+----
+
+https://fluttergems.dev/packages/english_words/
+
+[source,bash]
+flutter pub add english_words
+
+[source,dart]
+----
+class MyAppState extends ChangeNotifier {
+  var current = WordPair.random();
+}
+----
+
+https://pub.dev/packages/provider
+
+[source,bash]
+flutter pub add provider
+
+[source,dart]
+----
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // Provider is used here
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Namer app',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+          useMaterial3: true,
+        ),
+        home: MyHomePage(),
+      )
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Add provider package to use context.watch
+    var appState = context.watch<MyAppState>();
+    ....
+  }
+}
+----
