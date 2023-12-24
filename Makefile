@@ -1,6 +1,6 @@
 ROOT=.
 
-all: download build view
+all: build view
 -include $(ROOT)/asciidoc.mk
 
 clean:

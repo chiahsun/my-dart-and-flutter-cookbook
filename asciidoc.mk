@@ -1,10 +1,11 @@
 
-.PHONY: build view watch download
-
-TARGET_CSS=$(ROOT)/dark.css
+.PHONY: build view watch
 
 build:
 	asciidoctor -a stylesheet=$(ROOT)/dark.css -v -t index.adoc
+
+build-with-diagram:
+	asciidoctor -a stylesheet=$(ROOT)/dark.css -r asciidoctor-diagram -v -t index.adoc
 
 view:
 	open index.html -a Safari
@@ -12,7 +13,4 @@ view:
 watch:
 	$(ROOT)/watch_build.sh
 
-download: $(TARGET_CSS)
-
-$(TARGET_CSS):
-	curl -o $(ROOT)/dark.css -L https://github.com/darshandsoni/asciidoctor-skins/raw/gh-pages/css/dark.css
+# dark.css modified from https://github.com/darshandsoni/asciidoctor-skins/raw/gh-pages/css/dark.css

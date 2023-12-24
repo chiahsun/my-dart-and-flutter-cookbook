@@ -33,13 +33,16 @@ class MyAppState extends ChangeNotifier {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Add provider package to use context.watch
     var appState = context.watch<MyAppState>();
     return Scaffold(
       body: Column(
         children: [
-          Text('A random idea.'),
+          Text('A random AWESOME idea.'),
           Text(appState.current.asLowerCase),
+
+          ElevatedButton(onPressed: () {
+            print('Button pressed!');
+          }, child: Text('Next'))
         ],
       )
     );

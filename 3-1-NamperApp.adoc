@@ -33,11 +33,19 @@ https://fluttergems.dev/packages/english_words/
 [source,bash]
 flutter pub add english_words
 
+`pubspec.yaml`
+[source,yaml]
+----
+include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=30]
+include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=38]
+----
+
+`lib/main.dart`
 [source,dart]
 ----
-class MyAppState extends ChangeNotifier {
-  var current = WordPair.random();
-}
+include::3-1-NamerApp/3-CreateAProject/main.dart[lines=2]
+include::3-1-NamerApp/3-CreateAProject/main.dart[lines=28..31]
+
 ----
 
 https://pub.dev/packages/provider
@@ -45,34 +53,64 @@ https://pub.dev/packages/provider
 [source,bash]
 flutter pub add provider
 
+`pubspec.yaml`
+[source,yaml]
+----
+include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=30]
+include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=39]
+----
+
+`lib/main.dart`
 [source,dart]
 ----
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    // Provider is used here
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'Namer app',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
-          useMaterial3: true,
-        ),
-        home: MyHomePage(),
-      )
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // Add provider package to use context.watch
-    var appState = context.watch<MyAppState>();
-    ....
+include::3-1-NamerApp/3-CreateAProject/main.dart[lines=10..27]
+include::3-1-NamerApp/3-CreateAProject/main.dart[lines=33..37]
+    ...
   }
 }
 ----
+
+[TIP]
+====
+For IntelliJ IDEA, when focusing `lib/main.dart`, you can choose the target as `macOS (desktop)` in the top-right corner and then click the right triangle button to deploy the application. If you run the application in this way, when you save the file using `COMMAND + S`, it will hot-reload automatically.
+====
+
+
+==== Add a Button
+
+
+[source,dart]
+----
+include::3-1-NamerApp/4-MakeAButton/main.dart[lines=6..8]
+----
+<1> Run the app named `MyApp` from `main`.
+
+[source,dart]
+----
+include::3-1-NamerApp/4-MakeAButton/main.dart[lines=10..27]
+
+include::3-1-NamerApp/4-MakeAButton/main.dart[lines=29..31]
+----
+<1> `ChangeNotifierProvider` creates and provides the state for the app.
+<2> The state class `MyAppState` extends `ChangeNotifier` to notify others about its own changes.
+
+[mermaid]
+----
+classDiagram
+  class MyApp
+  class MyAppState
+  MyApp *--  MyHomePage
+  MyApp *-- MyAppState
+  MyHomePage *--  SomeWidget
+  MyHomePage *--  OtherWidget
+  class OtherWidget
+  OtherWidget --> MyAppState : Watches and uses
+----
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/4-MakeAButton/main.dart[lines=33..50]
+----
+<1> `MyHomePage` tacks change to the state using the `watch` method by the context
+<2> Add a button, it will print a message to the debug console
