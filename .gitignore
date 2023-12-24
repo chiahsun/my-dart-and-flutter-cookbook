@@ -1,7 +1,8 @@
 
 # AsciiDoc output files
 index.html 
-.asciidoctor/ # For diagrams
+## For diagrams
+.asciidoctor/ 
 *.png
 
 # Location for flutter SDK, if you place somewhere elese, remove this line

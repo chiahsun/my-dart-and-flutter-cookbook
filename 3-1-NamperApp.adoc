@@ -119,7 +119,7 @@ include::3-1-NamerApp/4-MakeAButton/main.dart[lines=33..50]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/4.2-ButtonNext/main.dart[lines=29..36]
+include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=29..36]
 ----
 <1> Use `notifyListeners()` to make anyone watching `MyAppState` get notified.
 
@@ -128,3 +128,81 @@ include::3-1-NamerApp/4.2-ButtonNext/main.dart[lines=29..36]
 ----
 include::3-1-NamerApp/4.2-ButtonNext/main.dart[lines=48..50]
 ----
+
+==== Extract Widget
+
+// https://stackoverflow.com/questions/57105154/shortcut-to-extract-flutter-widget-from-ui-layout
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=46]
+----
+Move cursor on the widget then `right click` > `refactor` > `Extract Flutter widget`
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/BigCard.dart[lines=2..14]
+----
+
+<1> Move cursor on the widget then `Right click` > `Show context actions` > `Wrap with padding`
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/BigCard2.dart[lines=11..16]
+----
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/BigCard3.dart[lines=11..18]
+----
+<1> Wrap with card
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/BigCard4.dart[lines=11..21]
+----
+<1> Get context
+<2> Use primary color from theme
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/BigCard5.dart[lines=11..24]
+----
+<1> Get style from text theme
+<2> Apply style to text
+
+Use `CMD + SPACE` with some space or next line to show available options like `color`
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/MyHomePage.dart[lines=2..21]
+----
+<1> Align to the vertical axis for the column
+
+At the bottom of your run console, you see three buttons(`Flutter Hot Reload`, `Flutter Hot Restart`, `Open Flutter Dev Tools`) and one vertical dots button.
+
+Click `Open Flutter Dev Tools` for the https://docs.flutter.dev/tools/devtools/inspector[Flutter Inspector].
+
+You can check that `Text`, `BigCard`, and `ElevatedButton` are in the center of `Column` but the `Column` is to the right of the `Scaffold`.
+
+In Flutter Inspector, click `Select Widget Mode`, then come back to click the column in your application, you can see that the column just occupy the left part of the whole application which means that it is not centered.
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/5-ExtractWidget/MyHomePage2.dart[lines=2..22]
+----
+<1> Wrap `Column` in `Center`
+<2> Add spacing using `SizedBox`
