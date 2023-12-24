@@ -75,9 +75,7 @@ include::3-1-NamerApp/3-CreateAProject/main.dart[lines=33..37]
 For IntelliJ IDEA, when focusing `lib/main.dart`, you can choose the target as `macOS (desktop)` in the top-right corner and then click the right triangle button to deploy the application. If you run the application in this way, when you save the file using `COMMAND + S`, it will hot-reload automatically.
 ====
 
-
 ==== Add a Button
-
 
 [source,dart]
 ----
@@ -114,3 +112,19 @@ include::3-1-NamerApp/4-MakeAButton/main.dart[lines=33..50]
 ----
 <1> `MyHomePage` tacks change to the state using the `watch` method by the context
 <2> Add a button, it will print a message to the debug console
+
+==== Add Next Behavior for the Button
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/4.2-ButtonNext/main.dart[lines=29..36]
+----
+<1> Use `notifyListeners()` to make anyone watching `MyAppState` get notified.
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/4.2-ButtonNext/main.dart[lines=48..50]
+----

@@ -31,7 +31,7 @@ class MyAppState extends ChangeNotifier {
 
   void getNext() {
     current = WordPair.random();
-    notifyListeners();
+    notifyListeners(); // <1>
   }
 }
 
