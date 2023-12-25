@@ -206,3 +206,16 @@ include::3-1-NamerApp/5-ExtractWidget/MyHomePage2.dart[lines=2..22]
 ----
 <1> Wrap `Column` in `Center`
 <2> Add spacing using `SizedBox`
+
+==== Add Favorite Button
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/6-AddFavoriteButton/main.dart[lines=29..47]
+----
+
+[source,dart]
+----
+include::3-1-NamerApp/6-AddFavoriteButton/main.dart[lines=62..84]
+----
