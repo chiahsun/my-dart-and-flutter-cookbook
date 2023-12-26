@@ -285,3 +285,15 @@ include::3-1-NamerApp/7-AddNavigationRail/main4.dart[lines=71..78]
 <1> Add `LayoutBuilder` for `Scaffold` for responsiveness
 <2> `builder` get called when constraint changes
 <3> Make `extended` as true when max width greater or equal to 600
+
+==== Add Favorites Page
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/8-AddFavoritesPage/main.dart[lines=166..189]
+----
+
+Check the https://github.com/flutter/codelabs/tree/main/namer/step_08[source code]
+
+https://dartpad.dev/?id=e7076b40fb17a0fa899f9f7a154a02e8[Advanced version]

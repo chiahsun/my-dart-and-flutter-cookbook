@@ -186,5 +186,4 @@ class FavoritePage extends StatelessWidget {
         ),
     ]);
   }
-
 }
