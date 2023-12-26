@@ -261,3 +261,27 @@ include::3-1-NamerApp/7-AddNavigationRail/main2.dart[lines=54..84]
 <3> Call `setState` to update `selectIndex` to ensure UI updates
 
 
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main3.dart[lines=59..69]
+----
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main3.dart[lines=88..92]
+----
+
+==== Add Responsiveness
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main4.dart[lines=71..78]
+    ...
+----
+<1> Add `LayoutBuilder` for `Scaffold` for responsiveness
+<2> `builder` get called when constraint changes
+<3> Make `extended` as true when max width greater or equal to 600

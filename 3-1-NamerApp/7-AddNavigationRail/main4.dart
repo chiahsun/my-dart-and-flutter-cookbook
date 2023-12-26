@@ -68,13 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
         throw UnimplementedError("No widget for $selectedIndex");
     }
 
-    return LayoutBuilder(
-      builder: (context, constraint) {
+    return LayoutBuilder( // <1>
+      builder: (context, constraint) { // <2>
         return Scaffold(
           body: Row(
             children: [
               SafeArea(child: NavigationRail(
-                extended: constraint.maxWidth >= 600,
+                extended: constraint.maxWidth >= 600, // <3>
                 destinations: [
                   NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home')),
                   NavigationRailDestination(icon: Icon(Icons.favorite), label: Text('Favorites'))
