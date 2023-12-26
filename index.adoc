@@ -21,10 +21,12 @@ include::1-Installation.adoc[]
 == https://dart.dev/tutorials[Dart Tutorials]
 include::2.1-DartLanguageTour.adoc[]
 include::2.2-AsynchronousProgramming.adoc[]
+include::2.3-AsynchronousProgrammingStreams.adoc[]
 
 [discrete]
 = Part II: The Flutter Cross-Platform Framework
 == https://docs.flutter.dev/codelabs[Flutter Codelabs]
+
 include::3-1-NamperApp.adoc[]
 
 

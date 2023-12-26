@@ -24,9 +24,9 @@ Edit the file `lib/main.dart`
 
 [source,dart]
 ----
-// Change the color and press r to hotreload
-colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+include::3-1-NamerApp/3-CreateAProject/main.dart[lines=20]
 ----
+<1> Change the color and press r to hotreload
 
 https://fluttergems.dev/packages/english_words/
 
@@ -126,7 +126,7 @@ include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=29..36]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/4.2-ButtonNext/main.dart[lines=48..50]
+include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=48..50]
 ----
 
 ==== Extract Widget
