@@ -219,3 +219,45 @@ include::3-1-NamerApp/6-AddFavoriteButton/main.dart[lines=29..47]
 ----
 include::3-1-NamerApp/6-AddFavoriteButton/main.dart[lines=62..84]
 ----
+
+==== Add Navigation Rail UI
+
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main.dart[lines=49..75]
+----
+
+<1> `SafeArea` avoid it child get obscured by a hardware notch or a status bar.
+<2> `extended: false` collapses the label of the icon when there is no enough horizontal space.
+<3> `Expanded` make this child of `Row` taking as much as space as possible
+<4> Move main content to `GeneratorPage`
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main.dart[lines=77..114]
+----
+
+==== Change to Stateful Widget
+
+On `MyHomePage`, `Right click` > `Show Context Actions` > `Convert to StatefulWidget`
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main2.dart[lines=49..52]
+----
+<1> Change MyHomePage inherits from `StatefulWidget` instead of `StatelessWidget` to store its own state
+
+`lib/main.dart`
+[source,dart]
+----
+include::3-1-NamerApp/7-AddNavigationRail/main2.dart[lines=54..84]
+----
+<1> Add `selectIndex` as state
+<2> Use `selectIndex`
+<3> Call `setState` to update `selectIndex` to ensure UI updates
+
+

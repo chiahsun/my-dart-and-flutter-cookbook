@@ -52,8 +52,8 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          SafeArea(child: NavigationRail(
-            extended: false,
+          SafeArea(child: NavigationRail( // <1>
+            extended: false, // <2>
             destinations: [
               NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home')),
               NavigationRailDestination(icon: Icon(Icons.favorite), label: Text('Favorites'))
@@ -64,9 +64,9 @@ class MyHomePage extends StatelessWidget {
             },
           )
           ),
-          Expanded(child: Container(
+          Expanded(child: Container( // <3>
             color: Theme.of(context).colorScheme.primaryContainer,
-              child: GeneratorPage())
+              child: GeneratorPage()) // <4>
           ),
         ],
       ),
