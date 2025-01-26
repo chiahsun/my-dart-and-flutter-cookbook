@@ -8,7 +8,7 @@ echo "Start watch ..."
 fswatch --no-defer -e ".*" -i "\\.adoc$" -0 . | while read -d "" event
 do
     echo "$event"
-    make build
+    make adoc-build
 done
 
 echo "End watch ..."

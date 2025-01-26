@@ -11,7 +11,6 @@
 --secondarycolor:#03a9f4;
 --tertiarycolor:#4db6ac;
 --sidebarbackground:#21252b;
---sourcebackground:#879b97aa; /*https://www.color-hex.com/color/0f372f*/
 --linkcolor:#f44336;
 --linkcoloralternate:#ff9800;
 --white:#FFFFFF;
@@ -28,7 +27,7 @@ p{font-family: "Noto Sans",sans-serif ! important}
 #toc.toc2 a:link{color:var(--linkcolor);}
 blockquote{color:var(--tertiarycolor) !important}
 .quoteblock{color:var(--white)}
-code{color:var(--linkcoloralternate);background-color: var(--sourcebackground) !important}
+code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
 
 
 /* Table styles */

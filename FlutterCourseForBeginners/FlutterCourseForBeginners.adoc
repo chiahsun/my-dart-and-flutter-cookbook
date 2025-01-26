@@ -1,0 +1,112 @@
+=== https://www.freecodecamp.org/news/learn-flutter-full-course/[Flutter Course for Beginners - 37-hour Mobile App Development Tutorial]
+
+https://www.youtube.com/watch?v=VPvVD8t02U8[YouTube]
+
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=4483s[Chapter 3 - Introduction to Dart]
+
+[source,bash]
+----
+flutter create learningdart
+----
+
+https://code.visualstudio.com/docs/setup/mac[Add Visual Studio Code path] to your `.zshrc`.
+
+[source,bash]
+----
+export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+----
+
+
+`CMD + Shift + P` to open the command palette, then type `Flutter: Select Device`. Another way to select device to to use the FLUTTER plugin by clicking the icon on the left panel.
+
+Click `Run` > `Start Debugging` to run the app.
+
+After the app is launched, if you are developing Web applications, you can open the Flutter DevTools and check the `Flutter Inspector`.
+
+`Shift` + `Option` + `F` to format the code. https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode[SO] https://dart.dev/tools/dart-format[dart format]
+
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=7286s[Chapter 4 - Dart control statements and collections]
+
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=10005s[Chapter 5 - Sound Null-safety in Dart]
+
+
+[source,dart]
+----
+include::null1.dart[lines=2]
+----
+
+where `??` is called the [if-null operator, or null-coalescing operator](https://dart.dev/language/operators). See https://dart.dev/null-safety/understanding-null-safety[understanding null safety]. Also read https://dart.dev/null-safety[null-safety].
+
+variable `!`  where `!` is called non-null assertion operator. See https://dart.dev/language/operators#other-operators[operators].
+
+`??=` operator only assigns when the variable is null. See https://dart.dev/language/operators#other-operators[??=].
+
+`?.` is the conditional invocation operator.
+
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=12432s[Chapter 6 - Dart enumerations, classes and objects]
+
+For VS Code, hover over some text and use `CMD` + `.` to see suggestions.
+
+https://dart.dev/language/constructors#factory-constructors[Factory constructors].
+
+For overriding an existed method of the super class, you need to use the `covariant` keyword. See https://stackoverflow.com/questions/71237639/functioning-of-covariant-in-flutter[SO] for the related discussions.
+
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=15517s[Chapter 7 - Advanced Dart]
+
+[source]
+----
+@horaciocoronel
+00:00:11 Chapter 0 - Presentation
+00:02:58 Chapter 1 - Developer Accounts
+00:39:12 Chapter 2 - Setup
+01:14:43 Chapter 3 - Introduction to Dart
+02:01:26 Chapter 4 - Dart control statements and collections
+02:46:45 Chapter 5 - Sound Null-safety in Dart
+03:27:12 Chapter 6 - Dart enumerations, classes and objects
+04:18:37 Chapter 7 - Advanced Dart
+05:00:40 Chapter 8 - Project setup
+05:48:30 Chapter 9 - iOS App Setup (App Identifier, Certificates and Profiles)
+06:59:33 Chapter 10 - Android app Setup
+07:31:32 Chapter 11 - Firebase Backend Setup
+08:01:21 Chapter 12 - Basic register-user screen
+09:04:54 Chapter 13 - Login view
+09:53:10 Chapter 14 - Separating app initialization from login/register
+10:19:48 Chapter 15 - Git and Github
+11:10:34 Chapter 16 - Email Verification View
+11:44:45 Chapter 17 - Link Between login and register views
+12:18:01 Chapter 18 - Logout view
+13:13:47 Chapter 19 - Go From Login to Notes View
+13:36:44 Chapter 20 - Cleaning Up our Routes
+13:51:17 Chapter 21 - Error Handling in Login View
+14:16:21 Chapter 22 - Error Handling in Register View and Going to Next Screen After Registration
+14:44:45 Chapter 23 - Confirming Identity Before Going to Main UI
+14:52:22 Chapter 24 - Auth Service
+15:55:22 Chapter 25 - Migrating to Auth Service
+16:33:41 Chapter 26 -  Unit Testing our Auth Service
+17:43:43 Chapter 27 - CRUD Local Storage
+19:30:57 Chapter 28 - Working with Streams in Notes Service
+20:04:32 Chapter 29 - Preparing Notes View to Read All Notes
+20:39:22 Chapter 30 - Preparing to Create New Notes
+21:00:16 Chapter 31 - Creating New Notes
+21:35:43 Chapter 32 - Displaying Notes in Notes View
+21:56:04 Chapter 33 - Deleting Existing Notes in Notes View
+22:40:46 Chapter 34 - Updating Existing Notes
+23:14:12 Chapter 35 - Protecting NotesService with Current User
+23:40:44 Chapter 36 - Writing Notes to Cloud Firestore
+24:58:08 Chapter 37 - Migrating to our Firestore Service
+25:22:36 Chapter 38 - Sharing Notes
+25:37:44 Chapter 39 - Introduction to Bloc
+26:24:31 Chapter 40 - Converting our Auth Process to Bloc
+27:31:17 Chapter 41 - Handling Auth Bloc Exceptions During Login
+27:52:45 Chapter 42 - Moving to Bloc for Routing and Dialogs
+29:58:23 Chapter 43 - Loading Screens
+29:48:31 Chapter 44 - Final Touches Before App Release
+30:43:03 Chapter 45 - App Icons and app Name
+31:06:34 Chapter 46 - Splash Screen
+31:56:59 Chapter 47 - Sending our iOS app to App Store Connect
+32:55:44 Chapter 48 - Releasing our iOS App
+33:20:32 Chapter 49 - Fixing Firebase Security Rules and Resubmitting the iOS App
+34:50:07 Chapter 50 - Releasing our Android App
+34:55:19 Chapter 51 - Localization in Flutter
+36:33:57 Outro - Final thoughts
+----

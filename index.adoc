@@ -6,7 +6,7 @@
 // https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-blocks/
 // https://docs.asciidoctor.org/asciidoctor/latest/syntax-highlighting/highlightjs/
 :source-highlighter: highlight.js
-:highlightjs-languages: bash, dart
+:highlightjs-theme: night-owl
 :source-language: adoc
 :icons: font
 :stem: <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
@@ -29,7 +29,8 @@ include::2.3-AsynchronousProgrammingStreams.adoc[]
 
 include::3-1-NamperApp.adoc[]
 
-
+== https://www.freecodecamp.org/news/tag/flutter/[FreeCodeCamp Flutter Tutorials]
+include::FlutterCourseForBeginners/FlutterCourseForBeginners.adoc[]
 
 
 
