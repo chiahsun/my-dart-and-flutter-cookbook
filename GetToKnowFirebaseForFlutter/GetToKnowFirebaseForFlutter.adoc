@@ -1,0 +1,84 @@
+
+=== https://firebase.google.com/codelabs/firebase-get-to-know-flutter#0[Get to know Firebase for Flutter]
+
+[source,bash]
+----
+git clone https://github.com/flutter/codelabs.git flutter-codelabs
+----
+
+==== Step 02
+
+
+===== Install CocoaPods
+
+https://guides.cocoapods.org/using/getting-started.html#installation[Install CocoaPods]
+
+
+Install brew-gem[https://github.com/sportngin/brew-gem] first and use it to install CocoaPods.
+
+[source,bash]
+----
+brew-gem install cocoapods
+----
+
+[source,bash]
+flutter run
+
+==== https://firebase.google.com/codelabs/firebase-get-to-know-flutter#2[Step 03]
+
+Create a Firebase project and disable Google Analytics.
+
+Futher reading: https://firebase.google.com/docs/projects/learn-more[Learn more about Firebase projects].
+
+==== https://firebase.google.com/codelabs/firebase-get-to-know-flutter#3[Step 04 - Configure Firebase]
+
+[source,bash]
+----
+flutter clean
+flutter run
+----
+
+[source,bash]
+----
+flutter pub add firebase_core
+flutter pub add firebase_auth
+flutter pub add cloud_firestore
+flutter pub add provider
+flutter pub add firebase_ui_auth
+flutter pub get
+----
+
+https://firebase.google.com/docs/cli[Install Firebase CLI.]
+
+[source,bash]
+brew install firebase-cli
+
+https://firebase.google.com/docs/cli#sign-in-test-cli[Login to the Firebase CLI.]
+
+[source,bash]
+----
+firebase login
+firebase projects:list
+npm update firebase-tools # Upgrade Firebase CLI
+----
+
+Install FlutterFire CLI
+
+[source,bash]
+dart pub global activate flutterfire_cli
+
+Put the following line to your `~/.zshrc`.
+
+[source,zsh]
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+[source,bash]
+flutterfire configure
+
+Add the following to your `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements` files.
+
+[source,xml]
+----
+    <key>com.apple.security.network.client</key>
+    <true/>
+----

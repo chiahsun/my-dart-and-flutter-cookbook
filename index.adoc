@@ -22,6 +22,7 @@ include::1-Installation.adoc[]
 include::2.1-DartLanguageTour.adoc[]
 include::2.2-AsynchronousProgramming.adoc[]
 include::2.3-AsynchronousProgrammingStreams.adoc[]
+include::FunctionAndClosre.adoc[]
 
 [discrete]
 = Part II: The Flutter Cross-Platform Framework
@@ -31,6 +32,9 @@ include::3-1-NamperApp.adoc[]
 
 == https://www.freecodecamp.org/news/tag/flutter/[FreeCodeCamp Flutter Tutorials]
 include::FlutterCourseForBeginners/FlutterCourseForBeginners.adoc[]
+
+== Firebase
+include::GetToKnowFirebaseForFlutter/GetToKnowFirebaseForFlutter.adoc[]
 
 
 

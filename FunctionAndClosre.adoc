@@ -1,0 +1,85 @@
+
+== https://docs.flutter.cn/community/tutorials/deep-dive-into-dart-s-function-closure/ [Deep Dive into Dart's Function and Closure]
+
+[source,dart]
+----
+void main() {
+  print((){} is Object);
+}
+----
+
+[source,dart]
+----
+void main() {
+  var name = 'Lee';
+  var printName = () {
+    print(name);
+  };
+  printName();
+}
+----
+
+[source,dart]
+----
+void main() {
+  var numberPrinter = () {
+    int num = 0;
+    return () {
+      for (int i = 0; i < 10; ++i) num++;
+      print(num);
+    };
+  };
+  
+  var printer = numberPrinter();
+  printer();
+  printer();
+}
+----
+
+[source,dart]
+----
+void main() {
+  print(exec(select('sum'), 1, 2));
+}
+
+typedef NumberOp = Function(int a, int b);
+
+int sum(int a, int b) => a + b;
+int sub(int a, int b) => a - b;
+
+NumberOp select(String opType) {
+  if (opType == 'sum') return sum;
+  if (opType == 'sub') return sub;
+  return (a, b) => 0;
+}
+
+int exec(NumberOp op, int a, int b) => op(a, b);
+----
+
+[source,dart]
+----
+class Counter {
+  int value;
+  Counter(this.value);
+  increment() { ++value; }
+}
+
+
+void main() {
+  var counter = Counter(0);
+  var fun1 = () {
+    var innerCounter = counter;
+    Counter incrementCounter() {
+      print(innerCounter.value);
+      innerCounter.increment();
+      return innerCounter;
+    }
+    return incrementCounter;
+  };
+  
+  var myFun = fun1();
+  print(myFun() == counter);
+  print(myFun() == counter);
+}
+
+----

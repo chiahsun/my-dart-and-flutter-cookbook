@@ -53,6 +53,35 @@ For overriding an existed method of the super class, you need to use the `covari
 
 https://www.youtube.com/watch?v=VPvVD8t02U8&t=15517s[Chapter 7 - Advanced Dart]
 
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=18040s[Chapter 8 - Project setup]
+
+[source,bash]
+----
+flutter create --org org.freecodecamp.test mynotes
+----
+
+[source,bash]
+flutter upgrade
+
+`CMD` + `F` or `CMD` + `Shift` + `F` to search in the project.
+
+[source,bash]
+----
+flutter pub add firebase_core
+flutter pub add firebase_auth
+flutter pub add cloud_firestore
+flutter pub add firebase_analytics
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=27092s[Chapter 11 - Firebase Backend Setup]
+
+
+https://firebase.flutter.dev/docs/overview/[Flutter Fire]
+
+https://firebase.google.com/docs/flutter/setup?hl=zh-tw&platform=ios[Google Firebase]
+
+https://www.youtube.com/watch?v=VPvVD8t02U8&t=28881s[Chapter 12 - Basic register-user screen]
+
 [source]
 ----
 @horaciocoronel
