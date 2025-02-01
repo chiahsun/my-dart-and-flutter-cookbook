@@ -1,0 +1,7 @@
+
+=== https://docs.flutter.dev/cookbook/navigation/named-routes[Cookbook]
+
+[source,bash]
+----
+flutter create named_route
+----

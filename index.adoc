@@ -26,6 +26,8 @@ include::FunctionAndClosre.adoc[]
 
 [discrete]
 = Part II: The Flutter Cross-Platform Framework
+include::flutter.dev/index.adoc[]
+
 == https://docs.flutter.dev/codelabs[Flutter Codelabs]
 
 include::3-1-NamperApp.adoc[]
