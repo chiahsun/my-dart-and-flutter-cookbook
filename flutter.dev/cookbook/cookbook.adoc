@@ -3,7 +3,7 @@
 
 [source,bash]
 ----
-flutter create named_route
+flutter create named_routes
 ----
 
 Type `stl` and then chagne the class name to `FirstScreen`. Do the same for `SecondScreen`.
