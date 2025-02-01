@@ -12,7 +12,7 @@ class FirstScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/second');
+              Navigator.pushNamed(context, '/second'); // <1>
             },
             child: const Text('Launch screen')),
       ),
@@ -32,7 +32,7 @@ class SecondScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pop(context); // <2>
             },
             child: const Text('Go back!')),
       ),

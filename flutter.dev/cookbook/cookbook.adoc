@@ -1,9 +1,31 @@
 
 === https://docs.flutter.dev/cookbook/navigation/named-routes[Cookbook]
 
+==== https://docs.flutter.dev/cookbook/navigation/named-routes[Named routes]
+
 [source,bash]
 ----
 flutter create named_routes
 ----
 
 Type `stl` and then chagne the class name to `FirstScreen`. Do the same for `SecondScreen`.
+
+[NOTE]
+====
+Named routes are not recommended for most applications now.
+====
+
+
+[source,dart]
+----
+include::navigation/named_routes/lib/main.dart[lines=3..22;23..41]
+----
+<1> Use `Navigator.pushNamed` to push a named route.
+<2> Use `Navigator.pop` to return to the previous route.
+
+==== https://docs.flutter.dev/cookbook/navigation/navigation-basics[Navigation basics]
+
+[source,bash]
+----
+flutter create --platforms=web navigation_basics
+----
