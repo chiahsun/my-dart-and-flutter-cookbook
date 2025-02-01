@@ -82,3 +82,12 @@ Add the following to your `macos/Runner/DebugProfile.entitlements` and `macos/Ru
     <key>com.apple.security.network.client</key>
     <true/>
 ----
+
+If your have the following error during `flutterfire configure`,
+
+[source,bash]
+----
+Exception: /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- xcodeproj (LoadError)
+----
+
+Install `rbenv` and use `rbenv` to install Ruby for a virtual environment. Then, install `xcodeproj` and `cocoapods` again in that virtual environment.

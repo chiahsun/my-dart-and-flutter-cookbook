@@ -80,9 +80,41 @@ https://firebase.flutter.dev/docs/overview/[Flutter Fire]
 
 https://firebase.google.com/docs/flutter/setup?hl=zh-tw&platform=ios[Google Firebase]
 
-https://www.youtube.com/watch?v=VPvVD8t02U8&t=28881s[Chapter 12 - Basic register-user screen]
+[source,bash]
+dart pub global activate flutterfire_cli
 
-[source]
+[source,bash]
+flutterfire configure
+
+* Create a new project, e.g. `mynotes-0f8jkl5c`. Don't use upper case letters.
+
+[source,text]
+----
+Exception: /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- xcodeproj (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+----
+
+
+https://stackoverflow.com/questions/36485180/how-to-update-ruby-with-homebrew[Ruby envrionment]
+
+[source,bash]
+----
+brew install rbenv
+rbenv install 3.4.1
+rbenv global 3.4.1
+ruby --version
+gem install xcodeproj
+gem install cocoapods
+
+flutterfire configure
+----
+
+* Note that you need to add  `eval "$(rbenv init -)"` to your .zshrc
+
+After configuration, check `lib/firebase_options.dart` for your setup.
+
+[source,text]
 ----
 @horaciocoronel
 00:00:11 Chapter 0 - Presentation
@@ -97,6 +129,124 @@ https://www.youtube.com/watch?v=VPvVD8t02U8&t=28881s[Chapter 12 - Basic register
 05:48:30 Chapter 9 - iOS App Setup (App Identifier, Certificates and Profiles)
 06:59:33 Chapter 10 - Android app Setup
 07:31:32 Chapter 11 - Firebase Backend Setup
+----
+
+
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=28881s[Chapter 12 - Basic register-user screen]
+
+`stl` for Stateless Widget, `stf` for Stateful Widget.
+
+If lookup fails, try hot restart.
+
+`CMD` + `.` for suggestions.
+
+https://firebase.google.com/docs/auth[Firebase Auth]
+
+https://firebase.google.com/docs/auth/flutter/start[Firebase Auth for Flutter]
+
+[source,bash]
+flutter pub add firebase_auth
+
+[source,text]
+----
+[ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: PlatformException(channel-error, Unable to establish connection on channel., null, null)
+----
+
+https://stackoverflow.com/questions/72880037/unhandled-exception-platformexceptionchannel-error-unable-to-establish-connec[SO]
+
+[source,bash]
+----
+flutter pub outdated
+----
+
+[source, xml]
+
+Add the following lines to `macos/Runner/DebugProfile.entitlements` and  `macos/Runner/ReleaseProfile.entitlements`
+
+----
+    <key>com.apple.security.network.client</key>
+    <true/>
+----
+
+[source,text]
+----
+Error: The pod "Firebase/CoreOnly" required by the plugin "firebase_core" requires a higher minimum macOS deployment version than the plugin's reported minimum version.
+To build, remove the plugin "firebase_core", or contact the plugin's developers for assistance.
+Error: Error running pod install
+----
+
+Change `Podfile` from `platform :osx, '10.14'` to `platform :osx, '15.0'` https://stackoverflow.com/questions/78052754/the-pod-firebase-firestore-required-by-the-plugin-cloud-firestore-requires-a[SO]
+
+[source,dart]
+----
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'firebase_options.dart';
+
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp( options: DefaultFirebaseOptions.currentPlatform,);
+  runApp(MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    ));
+}
+----
+
+Add `Authentication > email/password` in your https://console.firebase.google.com/[Firebase console]
+
+[source,text]
+----
+[ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: [firebase_auth/keychain-error] An error occurred when accessing the keychain. The NSLocalizedFailureReasonErrorKey field in the NSError.userInfo dictionary will contain more information about the error encountered
+----
+
+I use `flutter run` again and the above error just gone and introduce another error below. If you change your email, then the above error occurs again.
+
+[source,text]
+----
+[ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: [firebase_auth/email-already-in-use] The email address is already in use by another account.
+----
+
+https://github.com/firebase/flutterfire/issues/11186[SO]
+https://medium.com/@1998.singh.amarjit/save-credentials-autofill-credentials-in-flutter-33058295dd9d[TODO: Keychain]
+https://firebase.google.com/docs/ios/setup[Note: If you're targeting macOS or macOS Catalyst, you must add the Keychain Sharing capability to your target. In Xcode, navigate to your target's Signing & Capabilities tab, and then click + Capabilities to add a new capability.]
+https://stackoverflow.com/questions/72956366/firebase-auth-reports-keychain-error-on-ios-while-working-fine-on-android-flu[SO THIS!!!]
+
+
+https://docs.flutter.dev/resources/architectural-overview#architectural-layers[Flutter architecture layers]
+
+Use `FutureBuilder`.
+
+`Shift` + `Option` + `F` to format code in VS code.
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=32694s[Chapter 13 - Login view]
+
+[source,bash]
+----
+flutterfire configure # Choose web and macos
+----
+
+`F2` to rename symbol.
+
+`CMD` + click to go to the definition.
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=35590s[Chapter 14 - Separating app initialization from login/register]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=37188s[Chaper 15 - Git and Github]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=40234s[Chapter 16 - Email Verification View]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=42285s[Chapter 17 - Link Between login and register views]
+
+[source]
+----
 08:01:21 Chapter 12 - Basic register-user screen
 09:04:54 Chapter 13 - Login view
 09:53:10 Chapter 14 - Separating app initialization from login/register
