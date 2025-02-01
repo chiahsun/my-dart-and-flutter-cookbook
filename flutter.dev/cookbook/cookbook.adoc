@@ -36,3 +36,5 @@ include::navigation/navigation_basics/lib/main.dart[lines=3..22;24..40]
 ----
 <1> Use `Navigator.push` to push a route onto the navigator.
 <2> Use `Navigator.pop` to return to the previous route.
+
+You can change the widget from `MaterialApp` to `CupertinoApp` to use iOS style. You may need to exit the app and start again to make it work

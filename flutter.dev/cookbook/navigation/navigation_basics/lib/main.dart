@@ -1,18 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class FirstRoute extends StatelessWidget {
   const FirstRoute({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('First Route')),
-      body: Center(
-        child: ElevatedButton(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: const Text('First Route')),
+      child: Center(
+        child: CupertinoButton(
             onPressed: () {
               Navigator.push( // <1>
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => const SecondRoute()));
             },
             child: const Text('Open route')),
@@ -26,10 +26,10 @@ class SecondRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Second Route')),
-      body: Center(
-        child: ElevatedButton(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: const Text('Second Route')),
+      child: Center(
+        child: CupertinoButton(
             onPressed: () {
               Navigator.pop(context); // <2>
             },
@@ -40,7 +40,7 @@ class SecondRoute extends StatelessWidget {
 }
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(const CupertinoApp(
     title: 'Navigation Basics',
     home: FirstRoute(),
   ));
