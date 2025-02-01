@@ -5,3 +5,5 @@
 ----
 flutter create named_route
 ----
+
+Type `stl` and then chagne the class name to `FirstScreen`. Do the same for `SecondScreen`.
