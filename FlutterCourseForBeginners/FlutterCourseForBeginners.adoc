@@ -245,6 +245,8 @@ flutterfire configure # Choose web and macos
 
 ==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=42285s[Chapter 17 - Link Between login and register views]
 
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=44281s[Chapter 18 - Logout view]
+
 [source]
 ----
 08:01:21 Chapter 12 - Basic register-user screen
