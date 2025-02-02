@@ -2,3 +2,5 @@
 === https://api.flutter.dev/flutter/material/material-library.html[The Material Library]
 
 ==== https://api.flutter.dev/flutter/material/AppBar-class.html[App Bar]
+
+==== https://api.flutter.dev/flutter/material/PopupMenuButton-class.html[Popup Menu Button]
