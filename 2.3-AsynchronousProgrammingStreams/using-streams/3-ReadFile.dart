@@ -1,6 +1,8 @@
+// https://dart.dev/libraries/async/using-streams
 import 'dart:convert';
 import 'dart:io';
 
+// dart 3-ReadFile.dart sample.txt
 void main(List<String> args) async {
   if (args.isEmpty) {
     print('No file name provided');

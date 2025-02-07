@@ -1,4 +1,6 @@
 
-=== https://dart.dev/tutorials/language/streams[Asynchronous Programming: Streams]
+=== https://dart.dev/libraries/async/using-streams[Asynchronous Programming: Streams - Using Streams]
+
+https://dart.dev/libraries/async/creating-streams[Creating Streams]
 
 link:./2.3-AsynchronousProgrammingStreams[Source code directory]

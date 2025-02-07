@@ -247,7 +247,14 @@ flutterfire configure # Choose web and macos
 
 ==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=44281s[Chapter 18 - Logout view]
 
-[source]
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=47627s[Chapter 19 - Go From Login to Notes View]
+
+[source,dart]
+----
+import 'dart:developer' as devtools show log;
+----
+
+[source,text]
 ----
 08:01:21 Chapter 12 - Basic register-user screen
 09:04:54 Chapter 13 - Login view
@@ -257,13 +264,111 @@ flutterfire configure # Choose web and macos
 11:44:45 Chapter 17 - Link Between login and register views
 12:18:01 Chapter 18 - Logout view
 13:13:47 Chapter 19 - Go From Login to Notes View
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=49004s[Cahpter 20 - Cleaning Up our Routes]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=49877s[Chapter 21 - Error Handling in Login View]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=51381s[Chapter 22 - Error Handling in Register View and Going to Next Screen After Registration]
+
+If you modify the main function, you need to hot restart the app.
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=53085s[Chapter 23 - Confirming Identity Before Going to Main UI]
+
+[source,text]
+----
 13:36:44 Chapter 20 - Cleaning Up our Routes
 13:51:17 Chapter 21 - Error Handling in Login View
 14:16:21 Chapter 22 - Error Handling in Register View and Going to Next Screen After Registration
 14:44:45 Chapter 23 - Confirming Identity Before Going to Main UI
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=53542s[Chapter 24 - Auth Service]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=57322s[Chapter 25 - Migrating to Auth Service]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=59621s[Chapter 26 - Unit Testing our Auth Service]
+
+[source,bash]
+----
+flutter pub add test --dev
+----
+
+[source,bash]
+flutter build web # For build test package
+
+[source,bash]
+flutter test test/auth_test.dart
+
+[source,text]
+----
 14:52:22 Chapter 24 - Auth Service
 15:55:22 Chapter 25 - Migrating to Auth Service
 16:33:41 Chapter 26 -  Unit Testing our Auth Service
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=61463s[Chapter 27 - CRUD Local Storage]
+
+`NN`: not NULL
+
+`PK`: Primary Key: Primary key implies uniqueness.
+
+`AI`: Auto Increment
+
+`U`: Unique
+
+[source,sql]
+----
+CREATE TABLE "user" (
+	"id"	INTEGER NOT NULL,
+	"email"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+----
+
+[source,sql]
+----
+CREATE TABLE "note" (
+	"id"	INTEGER NOT NULL,
+	"user_id"	INTEGER NOT NULL,
+	"text"	TEXT,
+	"is_synced_with_cloud"	INTEGER NOT NULL DEFAULT 0,
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("user_id") REFERENCES "user"("id")
+);
+----
+
+https://pub.dev/[Flutter pub]
+
+[source,bash]
+flutter pub add sqflite path_provider path
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=70257s[Chapter 28 - Working with Streams in Notes Service]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=72272s[Chapter 29 - Preparing Notes View to Read All Notes]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=74362s[Chapter 30 - Preparing to Create New Notes]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=77011s[Chapter 31 - Creating New Notes]
+
+https://github.com/tekartik/sqflite/tree/master/packages_web/sqflite_common_ffi_web#setup-binaries[Sqflite on web]
+
+[source,bash]
+----
+# flutter pub add sqflite_common_ffi # For other platforms
+flutter pub add sqflite_common_ffi_web # For web
+dart run sqflite_common_ffi_web:setup
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=83272s[Chapter 32 - Displaying Notes in Notes View]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85415s[Chapter 33 - Deleting Existing Notes in Notes View]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=87624s[Chapter 34 - Updating Existing Notes]
+
+[source]
+----
 17:43:43 Chapter 27 - CRUD Local Storage
 19:30:57 Chapter 28 - Working with Streams in Notes Service
 20:04:32 Chapter 29 - Preparing Notes View to Read All Notes
@@ -272,6 +377,12 @@ flutterfire configure # Choose web and macos
 21:35:43 Chapter 32 - Displaying Notes in Notes View
 21:56:04 Chapter 33 - Deleting Existing Notes in Notes View
 22:40:46 Chapter 34 - Updating Existing Notes
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92319s[Chapter 35 - Protecting NotesService with Current User]
+
+[source]
+----
 23:14:12 Chapter 35 - Protecting NotesService with Current User
 23:40:44 Chapter 36 - Writing Notes to Cloud Firestore
 24:58:08 Chapter 37 - Migrating to our Firestore Service
