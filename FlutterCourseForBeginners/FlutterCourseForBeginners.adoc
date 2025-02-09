@@ -381,6 +381,27 @@ dart run sqflite_common_ffi_web:setup
 
 ==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92319s[Chapter 35 - Protecting NotesService with Current User]
 
+[source,text]
+----
+For `Stream<List<DatabaseNote>> get allNotes => _notesStreamController.stream.map((notes) => notes);`, I have a runtime error: TypeError: Instance of '_MapStream<List<DatabaseNote>, dynamic> is not a subtype of type 'Stream<List<DatabaseNote>>'
+----
+
+The error is due to the fact that the map function returns a new stream that emits the results of applying the provided function to each event of the original stream.
+
+[source,dart]
+----
+Stream<List<DatabaseNote>> get allNotes => _notesStreamController.stream.map((notes) => notes).cast<List<DatabaseNote>>();
+Stream<List<DatabaseNote>> get allNotes => _notesStreamController.stream.map((notes) => notes) as Stream<List<DatabaseNote>>;
+Stream<List<DatabaseNote>> get allNotes => _notesStreamController.stream.cast<List<DatabaseNote>>();
+----
+
+We just need to declare the type of the stream as `Stream<List<DatabaseNote>>`.
+
+[source,dart]
+late final StreamController<List<DatabaseNote>> _notesStreamController;
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85244s[Chapter 36 - Writing Notes to Cloud Firestore]
+
 [source]
 ----
 23:14:12 Chapter 35 - Protecting NotesService with Current User
