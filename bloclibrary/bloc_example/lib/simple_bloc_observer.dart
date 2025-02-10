@@ -28,3 +28,5 @@ class SimpleBlocObserver extends BlocObserver{
     print('${bloc.runtimeType} $event ---');
   }
 }
+
+  

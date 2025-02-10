@@ -1,3 +1,20 @@
 
 === https://bloclibrary.dev/getting-started/[BLOC Get Started]
 
+
+[source,bash]
+dart create bloc_example # https://dart.dev/tools/dart-create
+
+[source,bash]
+dart pub add bloc
+
+https://bloclibrary.dev/why-bloc/[Why BLOC]
+
+
+https://bloclibrary.dev/bloc-concepts/[BLOC concepts]
+
+
+https://bloclibrary.dev/bloc-concepts/#advanced-event-transformations[Advanced event transformations]
+
+[source,bash]
+dart pub add rxdart

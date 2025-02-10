@@ -38,6 +38,8 @@ include::FlutterCourseForBeginners/FlutterCourseForBeginners.adoc[]
 == Firebase
 include::GetToKnowFirebaseForFlutter/GetToKnowFirebaseForFlutter.adoc[]
 
+== Libraries
+include::bloclibrary/bloc.adoc[]
 
 
 

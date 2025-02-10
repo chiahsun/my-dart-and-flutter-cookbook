@@ -402,12 +402,74 @@ late final StreamController<List<DatabaseNote>> _notesStreamController;
 
 ==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85244s[Chapter 36 - Writing Notes to Cloud Firestore]
 
+https://firebase.google.com/docs/firestore/quickstart#dart[Quickstart]
+
 [source]
+----
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // This rule allows anyone with your Firestore database reference to view, edit,
+    // and delete all data in your Firestore database. It is useful for getting
+    // started, but it is configured to expire after 30 days because it
+    // leaves your app open to attackers. At that time, all client
+    // requests to your Firestore database will be denied.
+    //
+    // Make sure to write security rules for your app before that time, or else
+    // all client requests to your Firestore database will be denied until you Update
+    // your rules
+    match /{document=**} {
+      allow read, write: if request.time < timestamp.date(2025, 3, 10);
+    }
+  }
+}
+----
+
+https://firebase.flutter.dev/docs/firestore/usage/[Old cloud firestore documentation] 
+
+https://firebase.google.com/docs/firestore/quickstart[New documentation]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=100000s[Chapter 37 - Migrating to our Firestore Service]
+
+Select all and `CMD` + `/` to comment the code. https://stackoverflow.com/questions/34316156/how-can-i-comment-multiple-lines-in-visual-studio-code[SO]
+
+==== https//www.youtube.com/watch?v=VPvVD8t02U8&t=102900s[Chapter 38 - Sharing Notes]
+
+https://pub.dev/packages/share_plus[share_plus]
+
+[source,bash]
+----
+flutter pub add share_plus
+flutter clean # clutter clean web
+flutter pub get
+flutter build web
+----
+
+[source,text]
 ----
 23:14:12 Chapter 35 - Protecting NotesService with Current User
 23:40:44 Chapter 36 - Writing Notes to Cloud Firestore
 24:58:08 Chapter 37 - Migrating to our Firestore Service
 25:22:36 Chapter 38 - Sharing Notes
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=104000s[Chapter 39 - Introduction to Bloc]
+
+https://bloclibrary.dev/[Bloc Business LOgic Components] 
+
+https://github.com/felangel/bloc/tree/master/examples[examples]
+
+https://andyludeveloper.medium.com/flutter-%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E9%9C%80%E8%A6%81%E7%8B%80%E6%85%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-%E4%BB%A5-bloc-%E7%82%BA%E4%BE%8B-43412763fdfb[Good article]
+
+
+
+
+
+
+[source]
+----
 25:37:44 Chapter 39 - Introduction to Bloc
 26:24:31 Chapter 40 - Converting our Auth Process to Bloc
 27:31:17 Chapter 41 - Handling Auth Bloc Exceptions During Login
