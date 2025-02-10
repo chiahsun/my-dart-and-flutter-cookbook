@@ -18,3 +18,7 @@ https://bloclibrary.dev/bloc-concepts/#advanced-event-transformations[Advanced e
 
 [source,bash]
 dart pub add rxdart
+
+==== https://bloclibrary.dev/flutter-bloc-concepts/[Flutter BLOC concepts]
+
+https://pub.dev/packages/flutter_bloc[flutter_bloc]
