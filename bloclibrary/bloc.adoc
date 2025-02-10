@@ -22,3 +22,9 @@ dart pub add rxdart
 ==== https://bloclibrary.dev/flutter-bloc-concepts/[Flutter BLOC concepts]
 
 https://pub.dev/packages/flutter_bloc[flutter_bloc]
+
+[source,bash]
+flutter create --platforms=web counter_app
+
+[source,bash]
+flutter pub add flutter_bloc
