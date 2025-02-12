@@ -28,3 +28,8 @@ flutter create --platforms=web counter_app
 
 [source,bash]
 flutter pub add flutter_bloc
+
+==== https://github.com/felangel/bloc/tree/master/examples/flutter_weather[Example: Weather]
+
+[source,bash]
+flutter create --platforms=web weather
