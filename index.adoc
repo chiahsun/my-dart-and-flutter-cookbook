@@ -6,6 +6,7 @@
 // https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-blocks/
 // https://docs.asciidoctor.org/asciidoctor/latest/syntax-highlighting/highlightjs/
 :source-highlighter: highlight.js
+:highlightjs-languages: bash, dart
 :highlightjs-theme: night-owl
 :source-language: adoc
 :icons: font

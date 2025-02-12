@@ -1,9 +1,3 @@
-DIGESTS.md
-LICENSE
-README.md
-es/
-highlight.js
 highlight.min.js
 languages/
-package.json
 styles/
