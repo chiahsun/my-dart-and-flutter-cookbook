@@ -2,6 +2,8 @@
 
 https://www.youtube.com/watch?v=VPvVD8t02U8[YouTube]
 
+https://github.com/vandadnp/mynotes-course[My notes github source code]
+
 https://www.youtube.com/watch?v=VPvVD8t02U8&t=4483s[Chapter 3 - Introduction to Dart]
 
 [source,bash]
@@ -431,11 +433,11 @@ https://firebase.flutter.dev/docs/firestore/usage/[Old cloud firestore documenta
 
 https://firebase.google.com/docs/firestore/quickstart[New documentation]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=100000s[Chapter 37 - Migrating to our Firestore Service]
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=89888s[Chapter 37 - Migrating to our Firestore Service]
 
 Select all and `CMD` + `/` to comment the code. https://stackoverflow.com/questions/34316156/how-can-i-comment-multiple-lines-in-visual-studio-code[SO]
 
-==== https//www.youtube.com/watch?v=VPvVD8t02U8&t=102900s[Chapter 38 - Sharing Notes]
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=91356s[Chapter 38 - Sharing Notes]
 
 https://pub.dev/packages/share_plus[share_plus]
 
@@ -455,7 +457,7 @@ flutter build web
 25:22:36 Chapter 38 - Sharing Notes
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=104000s[Chapter 39 - Introduction to Bloc]
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92264s[Chapter 39 - Introduction to Bloc]
 
 https://bloclibrary.dev/[Bloc Business LOgic Components] 
 
@@ -464,16 +466,153 @@ https://github.com/felangel/bloc/tree/master/examples[examples]
 https://andyludeveloper.medium.com/flutter-%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E9%9C%80%E8%A6%81%E7%8B%80%E6%85%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-%E4%BB%A5-bloc-%E7%82%BA%E4%BE%8B-43412763fdfb[Good article]
 
 
+[source,bash]
+flutter pub add bloc flutter_bloc
 
+[source,dart]
+----
 
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
-[source]
+class _HomePageState extends State<HomePage> {
+  late final TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => CounterBloc(),
+      child: Scaffold(
+        appBar: AppBar(
+            title: const Text(
+          'Testing bloc',
+        )),
+        body:
+            BlocConsumer<CounterBloc, CounterState>(builder: (context, state) {
+          final invalidValue =
+              (state is CounterStateInvalidNumber) ? state.invalidValue : '';
+          return Column(
+            children: [
+              Text('Current value => ${state.value}'),
+              Visibility(child: Text('Invalid input: $invalidValue'), visible: state is CounterStateInvalidNumber,),
+              TextField(
+                controller: _controller,
+                decoration: const InputDecoration(
+                  hintText: 'Enter a number here',
+                ),
+                keyboardType: TextInputType.number,
+              ),
+              Row(children: [TextButton(onPressed: () {
+                context.read<CounterBloc>().add(IncrementEvent(_controller.text));
+              }, child: const Text('+')),
+              TextButton(onPressed: () {
+                context.read<CounterBloc>().add(DecrementEvent(_controller.text));
+              }, child: const Text('-'))],),
+            ],
+          );
+        }, listener: (context, state) {
+          _controller.clear();
+        }),
+      ),
+    );
+  }
+}
+
+@immutable
+abstract class CounterState {
+  final int value;
+  const CounterState(this.value);
+}
+
+class CounterStateValid extends CounterState {
+  const CounterStateValid(int value) : super(value);
+}
+
+class CounterStateInvalidNumber extends CounterState {
+  final String invalidValue;
+  const CounterStateInvalidNumber(
+      {required this.invalidValue, required int previousValue})
+      : super(previousValue);
+}
+
+@immutable
+abstract class CounterEvent {
+  final String value;
+  const CounterEvent(this.value);
+}
+
+class IncrementEvent extends CounterEvent {
+  const IncrementEvent(String value) : super(value);
+}
+
+class DecrementEvent extends CounterEvent {
+  const DecrementEvent(String value) : super(value);
+}
+
+class CounterBloc extends Bloc<CounterEvent, CounterState> {
+  CounterBloc() : super(const CounterStateValid(0)) {
+    on<IncrementEvent>((event, emit) {
+      final integer = int.tryParse(event.value);
+      if (integer != null) {
+        emit(CounterStateValid(state.value + integer));
+      } else {
+        emit(CounterStateInvalidNumber(
+            invalidValue: event.value, previousValue: state.value));
+      }
+    });
+    on<DecrementEvent>((event, emit) {
+      final integer = int.tryParse(event.value);
+      if (integer != null) {
+        emit(CounterStateValid(state.value - integer));
+      } else {
+        emit(CounterStateInvalidNumber(
+            invalidValue: event.value, previousValue: state.value));
+      }
+    });
+  }
+}
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=95071s[Chapter 40 - Converting our Auth Process to Bloc]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=99077s[Chapter 41 - Handling Auth Bloc Exceptions During Login]
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=100365s[Chapter 42 - Moving to Bloc for Routing and Dialogs]
+
+https://pub.dev/packages/equatable[Pub equatable]
+
+[source,bash]
+flutter pub add equatable
+
+[source,text]
 ----
 25:37:44 Chapter 39 - Introduction to Bloc
 26:24:31 Chapter 40 - Converting our Auth Process to Bloc
 27:31:17 Chapter 41 - Handling Auth Bloc Exceptions During Login
 27:52:45 Chapter 42 - Moving to Bloc for Routing and Dialogs
+----
+
+==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=107903s[Chapter 43 - Loading Screens]
+
+
+[source]
+----
 29:58:23 Chapter 43 - Loading Screens
 29:48:31 Chapter 44 - Final Touches Before App Release
 30:43:03 Chapter 45 - App Icons and app Name
