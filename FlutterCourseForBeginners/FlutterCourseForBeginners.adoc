@@ -1,4 +1,4 @@
-=== https://www.freecodecamp.org/news/learn-flutter-full-course/[Flutter Course for Beginners - 37-hour Mobile App Development Tutorial]
+==== https://www.freecodecamp.org/news/learn-flutter-full-course/[Flutter Course for Beginners - 37-hour Mobile App Development Tutorial]
 
 https://www.youtube.com/watch?v=VPvVD8t02U8[YouTube]
 
@@ -75,7 +75,7 @@ flutter pub add cloud_firestore
 flutter pub add firebase_analytics
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=27092s[Chapter 11 - Firebase Backend Setup]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=27092s[Chapter 11 - Firebase Backend Setup]
 
 
 https://firebase.flutter.dev/docs/overview/[Flutter Fire]
@@ -135,7 +135,7 @@ After configuration, check `lib/firebase_options.dart` for your setup.
 
 
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=28881s[Chapter 12 - Basic register-user screen]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=28881s[Chapter 12 - Basic register-user screen]
 
 `stl` for Stateless Widget, `stf` for Stateful Widget.
 
@@ -228,7 +228,7 @@ Use `FutureBuilder`.
 
 `Shift` + `Option` + `F` to format code in VS code.
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=32694s[Chapter 13 - Login view]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=32694s[Chapter 13 - Login view]
 
 [source,bash]
 ----
@@ -239,17 +239,17 @@ flutterfire configure # Choose web and macos
 
 `CMD` + click to go to the definition.
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=35590s[Chapter 14 - Separating app initialization from login/register]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=35590s[Chapter 14 - Separating app initialization from login/register]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=37188s[Chaper 15 - Git and Github]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=37188s[Chaper 15 - Git and Github]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=40234s[Chapter 16 - Email Verification View]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=40234s[Chapter 16 - Email Verification View]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=42285s[Chapter 17 - Link Between login and register views]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=42285s[Chapter 17 - Link Between login and register views]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=44281s[Chapter 18 - Logout view]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=44281s[Chapter 18 - Logout view]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=47627s[Chapter 19 - Go From Login to Notes View]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=47627s[Chapter 19 - Go From Login to Notes View]
 
 [source,dart]
 ----
@@ -268,15 +268,15 @@ import 'dart:developer' as devtools show log;
 13:13:47 Chapter 19 - Go From Login to Notes View
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=49004s[Cahpter 20 - Cleaning Up our Routes]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=49004s[Cahpter 20 - Cleaning Up our Routes]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=49877s[Chapter 21 - Error Handling in Login View]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=49877s[Chapter 21 - Error Handling in Login View]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=51381s[Chapter 22 - Error Handling in Register View and Going to Next Screen After Registration]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=51381s[Chapter 22 - Error Handling in Register View and Going to Next Screen After Registration]
 
 If you modify the main function, you need to hot restart the app.
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=53085s[Chapter 23 - Confirming Identity Before Going to Main UI]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=53085s[Chapter 23 - Confirming Identity Before Going to Main UI]
 
 [source,text]
 ----
@@ -286,11 +286,11 @@ If you modify the main function, you need to hot restart the app.
 14:44:45 Chapter 23 - Confirming Identity Before Going to Main UI
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=53542s[Chapter 24 - Auth Service]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=53542s[Chapter 24 - Auth Service]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=57322s[Chapter 25 - Migrating to Auth Service]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=57322s[Chapter 25 - Migrating to Auth Service]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=59621s[Chapter 26 - Unit Testing our Auth Service]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=59621s[Chapter 26 - Unit Testing our Auth Service]
 
 [source,bash]
 ----
@@ -310,7 +310,7 @@ flutter test test/auth_test.dart
 16:33:41 Chapter 26 -  Unit Testing our Auth Service
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=61463s[Chapter 27 - CRUD Local Storage]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=61463s[Chapter 27 - CRUD Local Storage]
 
 `NN`: not NULL
 
@@ -346,13 +346,13 @@ https://pub.dev/[Flutter pub]
 [source,bash]
 flutter pub add sqflite path_provider path
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=70257s[Chapter 28 - Working with Streams in Notes Service]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=70257s[Chapter 28 - Working with Streams in Notes Service]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=72272s[Chapter 29 - Preparing Notes View to Read All Notes]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=72272s[Chapter 29 - Preparing Notes View to Read All Notes]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=74362s[Chapter 30 - Preparing to Create New Notes]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=74362s[Chapter 30 - Preparing to Create New Notes]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=77011s[Chapter 31 - Creating New Notes]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=77011s[Chapter 31 - Creating New Notes]
 
 https://github.com/tekartik/sqflite/tree/master/packages_web/sqflite_common_ffi_web#setup-binaries[Sqflite on web]
 
@@ -363,11 +363,11 @@ flutter pub add sqflite_common_ffi_web # For web
 dart run sqflite_common_ffi_web:setup
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=83272s[Chapter 32 - Displaying Notes in Notes View]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=83272s[Chapter 32 - Displaying Notes in Notes View]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85415s[Chapter 33 - Deleting Existing Notes in Notes View]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85415s[Chapter 33 - Deleting Existing Notes in Notes View]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=87624s[Chapter 34 - Updating Existing Notes]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=87624s[Chapter 34 - Updating Existing Notes]
 
 [source]
 ----
@@ -381,7 +381,7 @@ dart run sqflite_common_ffi_web:setup
 22:40:46 Chapter 34 - Updating Existing Notes
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92319s[Chapter 35 - Protecting NotesService with Current User]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92319s[Chapter 35 - Protecting NotesService with Current User]
 
 [source,text]
 ----
@@ -402,7 +402,7 @@ We just need to declare the type of the stream as `Stream<List<DatabaseNote>>`.
 [source,dart]
 late final StreamController<List<DatabaseNote>> _notesStreamController;
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85244s[Chapter 36 - Writing Notes to Cloud Firestore]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=85244s[Chapter 36 - Writing Notes to Cloud Firestore]
 
 https://firebase.google.com/docs/firestore/quickstart#dart[Quickstart]
 
@@ -433,11 +433,11 @@ https://firebase.flutter.dev/docs/firestore/usage/[Old cloud firestore documenta
 
 https://firebase.google.com/docs/firestore/quickstart[New documentation]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=89888s[Chapter 37 - Migrating to our Firestore Service]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=89888s[Chapter 37 - Migrating to our Firestore Service]
 
 Select all and `CMD` + `/` to comment the code. https://stackoverflow.com/questions/34316156/how-can-i-comment-multiple-lines-in-visual-studio-code[SO]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=91356s[Chapter 38 - Sharing Notes]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=91356s[Chapter 38 - Sharing Notes]
 
 https://pub.dev/packages/share_plus[share_plus]
 
@@ -457,7 +457,7 @@ flutter build web
 25:22:36 Chapter 38 - Sharing Notes
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92264s[Chapter 39 - Introduction to Bloc]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=92264s[Chapter 39 - Introduction to Bloc]
 
 https://bloclibrary.dev/[Bloc Business LOgic Components] 
 
@@ -589,11 +589,11 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
 }
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=95071s[Chapter 40 - Converting our Auth Process to Bloc]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=95071s[Chapter 40 - Converting our Auth Process to Bloc]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=99077s[Chapter 41 - Handling Auth Bloc Exceptions During Login]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=99077s[Chapter 41 - Handling Auth Bloc Exceptions During Login]
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=100365s[Chapter 42 - Moving to Bloc for Routing and Dialogs]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=100365s[Chapter 42 - Moving to Bloc for Routing and Dialogs]
 
 https://pub.dev/packages/equatable[Pub equatable]
 
@@ -608,7 +608,7 @@ flutter pub add equatable
 27:52:45 Chapter 42 - Moving to Bloc for Routing and Dialogs
 ----
 
-==== https://www.youtube.com/watch?v=VPvVD8t02U8&t=107903s[Chapter 43 - Loading Screens]
+===== https://www.youtube.com/watch?v=VPvVD8t02U8&t=107903s[Chapter 43 - Loading Screens]
 
 
 [source]

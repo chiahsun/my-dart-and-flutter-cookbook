@@ -105,3 +105,46 @@ include::counter/lib/counter/view/counter_page.dart[lines=6..16]
 <1> Use `BlocProvider`
 <2> State where we use `CounterCubit` here
 <3> View and use `context.read<CounterCubit>()` inside the view
+
+===== Add Unit Tests
+
+https://docs.flutter.dev/testing/overview[Test overview]
+
+https://docs.flutter.dev/cookbook/testing/unit/introduction[Unit test - introduction]
+
+===== Add Widget Tests
+
+https://docs.flutter.dev/cookbook/testing/widget/introduction[Widget test - introduction]
+
+https://docs.flutter.dev/cookbook/testing/widget/finders[Widget test - finders]
+
+[source,bash]
+flutter pub add -d bloc_test
+
+===== Add Integration Tests
+
+https://docs.flutter.dev/cookbook/testing/integration/introduction[Integration test - introduction]
+
+https://docs.flutter.dev/testing/integration-tests[Integration test tutorial]
+
+[source,bash]
+flutter pub add 'dev:integration_test:{"sdk":"flutter"}'
+
+[source,bash]
+flutter test test/integration_test.dart
+
+[source,text]
+----
+Warning: integration_test plugin was not detected.
+If you're running the tests with `flutter drive`, please make sure your tests
+are in the `integration_test/` directory of your package and use
+`flutter test $path_to_test` to run it instead.
+If you're running the tests with Android instrumentation or XCTest, this means
+that you are not capturing test results properly! See the following link for
+how to set up the integration_test plugin:
+https://docs.flutter.dev/testing/integration-tests
+----
+
+
+https://docs.flutter.dev/testing/integration-tests[See later part to test on real devices]
+

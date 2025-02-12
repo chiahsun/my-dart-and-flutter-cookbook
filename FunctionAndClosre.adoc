@@ -1,5 +1,5 @@
 
-== https://docs.flutter.cn/community/tutorials/deep-dive-into-dart-s-function-closure/ [Deep Dive into Dart's Function and Closure]
+== https://docs.flutter.cn/community/tutorials/deep-dive-into-dart-s-function-closure/[Deep Dive into Dart's Function and Closure]
 
 [source,dart]
 ----

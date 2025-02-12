@@ -1,5 +1,5 @@
 
-=== https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0[Namer App: Your First Flutter App]
+==== https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0[Namer App: Your First Flutter App]
 
 [source, bash]
 flutter create namer_app
@@ -24,7 +24,7 @@ Edit the file `lib/main.dart`
 
 [source,dart]
 ----
-include::3-1-NamerApp/3-CreateAProject/main.dart[lines=20]
+include::3-CreateAProject/main.dart[lines=20]
 ----
 <1> Change the color and press r to hotreload
 
@@ -36,15 +36,15 @@ flutter pub add english_words
 `pubspec.yaml`
 [source,yaml]
 ----
-include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=30]
-include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=38]
+include::3-CreateAProject/pubspec.yaml[lines=30]
+include::3-CreateAProject/pubspec.yaml[lines=38]
 ----
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/3-CreateAProject/main.dart[lines=2]
-include::3-1-NamerApp/3-CreateAProject/main.dart[lines=28..31]
+include::3-CreateAProject/main.dart[lines=2]
+include::3-CreateAProject/main.dart[lines=28..31]
 
 ----
 
@@ -56,15 +56,15 @@ flutter pub add provider
 `pubspec.yaml`
 [source,yaml]
 ----
-include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=30]
-include::3-1-NamerApp/3-CreateAProject/pubspec.yaml[lines=39]
+include::3-CreateAProject/pubspec.yaml[lines=30]
+include::3-CreateAProject/pubspec.yaml[lines=39]
 ----
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/3-CreateAProject/main.dart[lines=10..27]
-include::3-1-NamerApp/3-CreateAProject/main.dart[lines=33..37]
+include::3-CreateAProject/main.dart[lines=10..27]
+include::3-CreateAProject/main.dart[lines=33..37]
     ...
   }
 }
@@ -75,19 +75,19 @@ include::3-1-NamerApp/3-CreateAProject/main.dart[lines=33..37]
 For IntelliJ IDEA, when focusing `lib/main.dart`, you can choose the target as `macOS (desktop)` in the top-right corner and then click the right triangle button to deploy the application. If you run the application in this way, when you save the file using `COMMAND + S`, it will hot-reload automatically.
 ====
 
-==== Add a Button
+===== Add a Button
 
 [source,dart]
 ----
-include::3-1-NamerApp/4-MakeAButton/main.dart[lines=6..8]
+include::4-MakeAButton/main.dart[lines=6..8]
 ----
 <1> Run the app named `MyApp` from `main`.
 
 [source,dart]
 ----
-include::3-1-NamerApp/4-MakeAButton/main.dart[lines=10..27]
+include::4-MakeAButton/main.dart[lines=10..27]
 
-include::3-1-NamerApp/4-MakeAButton/main.dart[lines=29..31]
+include::4-MakeAButton/main.dart[lines=29..31]
 ----
 <1> `ChangeNotifierProvider` creates and provides the state for the app.
 <2> The state class `MyAppState` extends `ChangeNotifier` to notify others about its own changes.
@@ -108,28 +108,28 @@ classDiagram
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/4-MakeAButton/main.dart[lines=33..50]
+include::4-MakeAButton/main.dart[lines=33..50]
 ----
 <1> `MyHomePage` tacks change to the state using the `watch` method by the context
 <2> Add a button, it will print a message to the debug console
 
-==== Add Next Behavior for the Button
+===== Add Next Behavior for the Button
 
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=29..36]
+include::4-MakeAButton/main2.dart[lines=29..36]
 ----
 <1> Use `notifyListeners()` to make anyone watching `MyAppState` get notified.
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=48..50]
+include::4-MakeAButton/main2.dart[lines=48..50]
 ----
 
-==== Extract Widget
+===== Extract Widget
 
 // https://stackoverflow.com/questions/57105154/shortcut-to-extract-flutter-widget-from-ui-layout
 
@@ -137,7 +137,7 @@ include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=48..50]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/4-MakeAButton/main2.dart[lines=46]
+include::4-MakeAButton/main2.dart[lines=46]
 ----
 Move cursor on the widget then `right click` > `refactor` > `Extract Flutter widget`
 
@@ -145,7 +145,7 @@ Move cursor on the widget then `right click` > `refactor` > `Extract Flutter wid
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/BigCard.dart[lines=2..14]
+include::5-ExtractWidget/BigCard.dart[lines=2..14]
 ----
 
 <1> Move cursor on the widget then `Right click` > `Show context actions` > `Wrap with padding`
@@ -154,21 +154,21 @@ include::3-1-NamerApp/5-ExtractWidget/BigCard.dart[lines=2..14]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/BigCard2.dart[lines=11..16]
+include::5-ExtractWidget/BigCard2.dart[lines=11..16]
 ----
 
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/BigCard3.dart[lines=11..18]
+include::5-ExtractWidget/BigCard3.dart[lines=11..18]
 ----
 <1> Wrap with card
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/BigCard4.dart[lines=11..21]
+include::5-ExtractWidget/BigCard4.dart[lines=11..21]
 ----
 <1> Get context
 <2> Use primary color from theme
@@ -176,7 +176,7 @@ include::3-1-NamerApp/5-ExtractWidget/BigCard4.dart[lines=11..21]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/BigCard5.dart[lines=11..24]
+include::5-ExtractWidget/BigCard5.dart[lines=11..24]
 ----
 <1> Get style from text theme
 <2> Apply style to text
@@ -187,7 +187,7 @@ Use `CMD + SPACE` with some space or next line to show available options like `c
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/MyHomePage.dart[lines=2..21]
+include::5-ExtractWidget/MyHomePage.dart[lines=2..21]
 ----
 <1> Align to the vertical axis for the column
 
@@ -202,31 +202,31 @@ In Flutter Inspector, click `Select Widget Mode`, then come back to click the co
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/5-ExtractWidget/MyHomePage2.dart[lines=2..22]
+include::5-ExtractWidget/MyHomePage2.dart[lines=2..22]
 ----
 <1> Wrap `Column` in `Center`
 <2> Add spacing using `SizedBox`
 
-==== Add Favorite Button
+===== Add Favorite Button
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/6-AddFavoriteButton/main.dart[lines=29..47]
+include::6-AddFavoriteButton/main.dart[lines=29..47]
 ----
 
 [source,dart]
 ----
-include::3-1-NamerApp/6-AddFavoriteButton/main.dart[lines=62..84]
+include::6-AddFavoriteButton/main.dart[lines=62..84]
 ----
 
-==== Add Navigation Rail UI
+===== Add Navigation Rail UI
 
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main.dart[lines=49..75]
+include::7-AddNavigationRail/main.dart[lines=49..75]
 ----
 
 <1> `SafeArea` avoid it child get obscured by a hardware notch or a status bar.
@@ -237,24 +237,24 @@ include::3-1-NamerApp/7-AddNavigationRail/main.dart[lines=49..75]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main.dart[lines=77..114]
+include::7-AddNavigationRail/main.dart[lines=77..114]
 ----
 
-==== Change to Stateful Widget
+===== Change to Stateful Widget
 
 On `MyHomePage`, `Right click` > `Show Context Actions` > `Convert to StatefulWidget`
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main2.dart[lines=49..52]
+include::7-AddNavigationRail/main2.dart[lines=49..52]
 ----
 <1> Change MyHomePage inherits from `StatefulWidget` instead of `StatelessWidget` to store its own state
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main2.dart[lines=54..84]
+include::7-AddNavigationRail/main2.dart[lines=54..84]
 ----
 <1> Add `selectIndex` as state
 <2> Use `selectIndex`
@@ -264,34 +264,34 @@ include::3-1-NamerApp/7-AddNavigationRail/main2.dart[lines=54..84]
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main3.dart[lines=59..69]
+include::7-AddNavigationRail/main3.dart[lines=59..69]
 ----
 
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main3.dart[lines=88..92]
+include::7-AddNavigationRail/main3.dart[lines=88..92]
 ----
 
-==== Add Responsiveness
+===== Add Responsiveness
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/7-AddNavigationRail/main4.dart[lines=71..78]
+include::7-AddNavigationRail/main4.dart[lines=71..78]
     ...
 ----
 <1> Add `LayoutBuilder` for `Scaffold` for responsiveness
 <2> `builder` get called when constraint changes
 <3> Make `extended` as true when max width greater or equal to 600
 
-==== Add Favorites Page
+===== Add Favorites Page
 
 `lib/main.dart`
 [source,dart]
 ----
-include::3-1-NamerApp/8-AddFavoritesPage/main.dart[lines=166..189]
+include::8-AddFavoritesPage/main.dart[lines=166..189]
 ----
 
 Check the https://github.com/flutter/codelabs/tree/main/namer/step_08[source code]
