@@ -34,6 +34,102 @@ flutter pub add flutter_bloc
 [source,bash]
 flutter create --platforms=web counter
 
+[source,bash]
+flutter pub add flutter_bloc
+
+`CMD` + `SHIFT` + `P` or `F1` to open the command palette (https://dev.to/devland/100-crucial-keyboard-shortcuts-f[Shotcuts]). 
+
+https://marketplace.visualstudio.com/items?itemName=FelixAngelov.bloc[Bloc pluggins].
+
+`Cubit: New Cubit` > `counter` and choose directory under `lib/counter`, it will create 
+
+[source,text]
+----
+cubit
+├── counter_cubit.dart
+└── counter_state.dart
+
+1 directory, 2 files
+----
+
+`counter_cubit.dart`
+
+[source,dart]
+----
+import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
+
+part 'counter_state.dart';
+
+class CounterCubit extends Cubit<CounterState> {
+  CounterCubit() : super(CounterInitial());
+}
+----
+
+`counter_state.dart`
+
+[source,dart]
+----
+part of 'counter_cubit.dart';
+
+@immutable
+sealed class CounterState {}
+
+final class CounterInitial extends CounterState {}
+----
+
+
+`Bloc: New Bloc` > `counter` and choose directory under `lib/counter`, it will create 
+
+[source,text]
+----
+bloc
+├── counter_bloc.dart
+├── counter_event.dart
+└── counter_state.dart
+
+1 directory, 3 files
+----
+
+`counter_bloc.dart`
+[source,dart]
+----
+import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
+
+part 'counter_event.dart';
+part 'counter_state.dart';
+
+class CounterBloc extends Bloc<CounterEvent, CounterState> {
+  CounterBloc() : super(CounterInitial()) {
+    on<CounterEvent>((event, emit) {
+      // TODO: implement event handler
+    });
+  }
+}
+----
+
+`counter_event.dart`
+[source,dart]
+----
+part of 'counter_bloc.dart';
+
+@immutable
+sealed class CounterEvent {}
+----
+
+`counter_state.dart`
+[source,dart]
+----
+part of 'counter_bloc.dart';
+
+@immutable
+sealed class CounterState {}
+
+final class CounterInitial extends CounterState {}
+----
+
+
 
 ==== https://bloclibrary.dev/tutorials/flutter-weather/[Example: Weather]
 
