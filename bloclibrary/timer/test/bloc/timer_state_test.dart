@@ -1,7 +1,5 @@
-
-
 import 'package:flutter_test/flutter_test.dart';
-import 'package:timer/bloc/timer_state.dart';
+import 'package:timer/bloc/timer_bloc.dart';
 
 void main() {
   group('Timer initial', () {
@@ -28,8 +26,7 @@ void main() {
 
   group('Timer complete', () {
     test('Support value comparison', () {
-      expect(TimerComplete(5), TimerComplete(5));
-      expect(TimerComplete(5), isNot(equals(TimerComplete(6))));
+      expect(TimerComplete(), TimerComplete());
     });
   });
 }

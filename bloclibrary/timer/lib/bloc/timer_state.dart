@@ -1,4 +1,5 @@
-import 'package:equatable/equatable.dart';
+part of 'timer_bloc.dart';
+
 
 sealed class TimerState extends Equatable {
   const TimerState(this.duration);
@@ -23,6 +24,9 @@ final class TimerPause extends TimerState {
   String toString() => 'TimerPause { duration: $duration }';
 }
 
+// Note that since we implement Equatable
+// If there are two consecutive TimerRunning with same duration
+// then the listner side would receive once only
 final class TimerRunning extends TimerState {
   const TimerRunning(super.duration);
 
@@ -31,8 +35,5 @@ final class TimerRunning extends TimerState {
 }
 
 class TimerComplete extends TimerState {
-  const TimerComplete(super.duration);
-
-  @override
-  String toString() => 'TimerComplete { duration: $duration }';
+  const TimerComplete() : super(0);
 }
