@@ -48,6 +48,6 @@ include::bloclibrary/bloc.adoc[]
 
 === Testing
 include::pub.dev/mockito/mockito.adoc[]
-
+include::pub.dev/mocktail/mocktail.adoc[]
 
 

@@ -1,0 +1,10 @@
+
+==== https://pub.dev/packages/mocktail[mocktail]
+
+[source,bash]
+----
+dart create cat
+cd cat
+dart pub add -d mocktail
+dart test test/cat_test.dart
+----
