@@ -1,2 +1,18 @@
 ==== https://bloclibrary.dev/tutorials/flutter-timer/[Example: Timer]
 
+[source,bash]
+flutter create --platforms=web timer
+
+[source,bash]
+----
+flutter pub add bloc equatable flutter_bloc
+----
+
+https://dart.dev/language/class-modifiers#sealed[Dart: sealed]
+
+
+[source,bash]
+----
+flutter pub add -d mocktail
+flutter pub add -d bloc_test
+----

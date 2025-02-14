@@ -17,6 +17,9 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
         super(TimerInitial(ticker.ticks)) {
     on<StartTimer>(_onStarted);
     on<_TickTimer>(_onTicked);
+    on<PauseTimer>(_onPaused);
+    on<ResetTimer>(_onReset);
+    on<ResumeTimer>(_onResume);
   }
 
   @override
@@ -39,5 +42,24 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
     emit(event.duration > 0
         ? TimerRunning(event.duration)
         : const TimerComplete());
+  }
+
+  void _onPaused(PauseTimer event, Emitter<TimerState> emit) {
+    if (state is TimerRunning) {
+      _tickerSubscription?.pause();
+      emit(TimerPause(state.duration));
+    }
+  }
+
+  void _onResume(ResumeTimer event, Emitter<TimerState> emit) {
+    if (state is TimerPause) {
+      _tickerSubscription?.resume();
+      emit(TimerRunning(state.duration));
+    }
+  }
+
+  void _onReset(ResetTimer event, Emitter<TimerState> emit) {
+    _tickerSubscription?.cancel();
+    emit(TimerInitial(duration));
   }
 }
