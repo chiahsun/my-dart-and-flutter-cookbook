@@ -1,0 +1,26 @@
+
+==== https://pub.dev/packages/mockito[mockito]
+
+[source,bash]
+----
+dart pub add -d mockito
+dart pub add -d build_runner
+----
+
+[source,dart]
+----
+@GenerateNiceMocks([MockSpec<Cat>()])
+import 'cat.mocks.dart';
+----
+
+
+Use the following command to generate the mock files.
+[source,bash]
+----
+dart run build_runner build
+----
+
+Note that mockito only generate mocks annotated under `test/` directory.
+
+[source,bash]
+dart test test/cat_test.dart
