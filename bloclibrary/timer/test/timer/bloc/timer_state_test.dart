@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:timer/bloc/timer_bloc.dart';
+import 'package:timer/timer/bloc/timer_bloc.dart';
 
 void main() {
   group('Timer initial', () {
