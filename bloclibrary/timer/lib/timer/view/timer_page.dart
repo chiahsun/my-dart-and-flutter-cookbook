@@ -24,6 +24,7 @@ class TimerView extends StatelessWidget {
       appBar: AppBar(title: const Text('Timer')),
       body: Stack(
         children: [
+          const Background(),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,7 +49,11 @@ class TimerText extends StatelessWidget {
   Widget build(BuildContext context) {
     final duration = context.select((TimerBloc bloc) => bloc.state.duration);
 
-    return Text('$duration');
+    final minuteStr = ((duration / 60) % 60).floor().toString().padLeft(2, '0');
+    final secondsStr = (duration % 60).floor().toString().padLeft(2, '0');
+
+    return Text('$minuteStr:$secondsStr',
+    style: Theme.of(context).textTheme.displayLarge);
   }
 }
 
@@ -57,17 +62,21 @@ class Actions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<TimerBloc, TimerState>(builder: (context, state) {
+    return BlocBuilder<TimerBloc, TimerState>(
+      buildWhen: (prev, state) => prev.runtimeType != state.runtimeType,
+      builder: (context, state) {
       return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         ...switch (state) {
           TimerInitial() => [
               _buildStartButton(context),
             ],
           TimerRunning() => [
-              _buildPauseButton(context), _buildResetButton(context)
+              _buildPauseButton(context),
+              _buildResetButton(context)
             ],
           TimerPause() => [
-              _buildResumeButton(context), _buildResetButton(context)
+              _buildResumeButton(context),
+              _buildResetButton(context)
             ],
           TimerComplete() => [
               _buildResetButton(context),
@@ -103,6 +112,26 @@ class Actions extends StatelessWidget {
     return FloatingActionButton(
       child: Icon(Icons.play_arrow),
       onPressed: () => context.read<TimerBloc>().add(const ResumeTimer()),
+    );
+  }
+}
+
+class Background extends StatelessWidget {
+  const Background({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.blue.shade50,
+            Colors.blue.shade500,
+          ]
+        )
+      ),
     );
   }
 }
