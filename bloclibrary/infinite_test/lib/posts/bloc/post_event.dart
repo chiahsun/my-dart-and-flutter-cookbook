@@ -8,4 +8,4 @@ sealed class PostEvent extends Equatable {
   List<Object> get props => [];
 }
 
-final class PostFetched extends PostEvent {}
+final class FetchPost extends PostEvent {}
