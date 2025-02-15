@@ -16,3 +16,6 @@ https://dart.dev/language/class-modifiers#sealed[Dart: sealed]
 flutter pub add -d mocktail
 flutter pub add -d bloc_test
 ----
+
+[source,bash]
+flutter test test/
