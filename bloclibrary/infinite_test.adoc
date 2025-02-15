@@ -1,0 +1,13 @@
+
+==== https://bloclibrary.dev/tutorials/flutter-infinite-list/[Example: Infinite list]
+
+[source,bash]
+flutter create --platforms=web infinite_test
+
+[source,bash]
+----
+flutter pub add bloc equatable flutter_bloc
+flutter pub add http
+flutter pub add -d mocktail
+flutter pub add -d bloc_test
+----
