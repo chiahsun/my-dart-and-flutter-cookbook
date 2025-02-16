@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:infinite_test/posts/bloc/post_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:infinite_test/posts/models/post.dart';
 import 'package:infinite_test/posts/widgets/bottom_loader.dart';
 import 'package:infinite_test/posts/widgets/post_list_item.dart'; // For context.read<PostBloc>()
 
+
+const postListsNoPost = 'No posts';
+const postListsFailedToFetch = 'Failed to fetch posts';
 
 class PostsList extends StatefulWidget {
   const PostsList({super.key});
@@ -33,10 +35,10 @@ class _PostsListState extends State<PostsList> {
     return BlocBuilder<PostBloc, PostState>(builder: (context, state){
       switch (state.status) {
         case PostStatus.failure:
-          return const Center(child: Text('Failed to fetch posts'));
+          return const Center(child: Text(postListsFailedToFetch));
         case PostStatus.success:
           if (state.posts.isEmpty) {
-            return const Center(child: Text('No posts'));
+            return const Center(child: Text(postListsNoPost));
           }
           return ListView.builder(
             itemBuilder: (BuildContext context, int index) {
