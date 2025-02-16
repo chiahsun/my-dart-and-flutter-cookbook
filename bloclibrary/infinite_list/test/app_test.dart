@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:infinite_test/app.dart';
-import 'package:infinite_test/posts/view/posts_page.dart';
+import 'package:infinite_list/app.dart';
+import 'package:infinite_list/posts/view/posts_page.dart';
 
 void main() {
   group('Some function usage test', () {

@@ -1,8 +1,8 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
-import 'package:infinite_test/posts/bloc/post_bloc.dart';
-import 'package:infinite_test/posts/models/post.dart';
+import 'package:infinite_list/posts/bloc/post_bloc.dart';
+import 'package:infinite_list/posts/models/post.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockHttpClient extends Mock implements http.Client {}

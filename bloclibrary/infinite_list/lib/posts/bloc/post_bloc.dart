@@ -2,7 +2,7 @@ import 'dart:convert'; // For json
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:infinite_test/posts/models/post.dart';
+import 'package:infinite_list/posts/models/post.dart';
 
 import 'package:http/http.dart' as http;
 

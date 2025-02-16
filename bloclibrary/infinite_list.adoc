@@ -11,3 +11,14 @@ flutter pub add http
 flutter pub add -d mocktail
 flutter pub add -d bloc_test
 ----
+
+https://pub.dev/packages/rename[Rename]
+
+[source,bash]
+----
+flutter pub global activate rename
+rename getAppName --targets web
+rename setAppName --targets web --value "infinite_list"
+----
+
+The rename utility only works for the bundle id. You still have to modify the source code manually.

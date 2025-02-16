@@ -2,11 +2,11 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:infinite_test/posts/bloc/post_bloc.dart';
-import 'package:infinite_test/posts/models/post.dart';
-import 'package:infinite_test/posts/view/posts_list.dart';
-import 'package:infinite_test/posts/widgets/bottom_loader.dart';
-import 'package:infinite_test/posts/widgets/post_list_item.dart';
+import 'package:infinite_list/posts/bloc/post_bloc.dart';
+import 'package:infinite_list/posts/models/post.dart';
+import 'package:infinite_list/posts/view/posts_list.dart';
+import 'package:infinite_list/posts/widgets/bottom_loader.dart';
+import 'package:infinite_list/posts/widgets/post_list_item.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockPostsBloc extends MockBloc<PostEvent, PostState>

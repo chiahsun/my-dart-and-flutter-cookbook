@@ -1,6 +1,6 @@
 {
-    "name": "infinite_test",
-    "short_name": "infinite_test",
+    "name": "infinite_list",
+    "short_name": "infinite_list",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

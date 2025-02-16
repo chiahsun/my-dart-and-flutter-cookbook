@@ -30,6 +30,8 @@ flutter create --platforms=web counter_app
 flutter pub add flutter_bloc
 
 include::counter.adoc[]
+include::timer.adoc[]
+include::infinite_list.adoc[]
 
 
 ==== https://bloclibrary.dev/tutorials/flutter-weather/[Example: Weather]

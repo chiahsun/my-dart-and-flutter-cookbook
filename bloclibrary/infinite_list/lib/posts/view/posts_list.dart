@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:infinite_test/posts/bloc/post_bloc.dart';
+import 'package:infinite_list/posts/bloc/post_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:infinite_test/posts/widgets/bottom_loader.dart';
-import 'package:infinite_test/posts/widgets/post_list_item.dart'; // For context.read<PostBloc>()
+import 'package:infinite_list/posts/widgets/bottom_loader.dart';
+import 'package:infinite_list/posts/widgets/post_list_item.dart'; // For context.read<PostBloc>()
 
 
 const postListsNoPost = 'No posts';

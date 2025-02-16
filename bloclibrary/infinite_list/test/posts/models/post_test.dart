@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:infinite_test/posts/models/post.dart';
+import 'package:infinite_list/posts/models/post.dart';
 
 void main() {
   group('Post should support comparison', () {
