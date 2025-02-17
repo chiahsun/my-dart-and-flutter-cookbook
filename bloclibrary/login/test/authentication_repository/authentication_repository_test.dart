@@ -13,15 +13,15 @@ void main() {
       expectLater(
           authenticationRepository.status,
           emitsInOrder(
-              <AutheticationStatus>[AutheticationStatus.unauthenticated]));
+              <AuthenticationStatus>[AuthenticationStatus.unauthenticated]));
     });
 
     test('logIn emits authenticated', () async {
       expectLater(
           authenticationRepository.status,
-          emitsInOrder(<AutheticationStatus>[
-            AutheticationStatus.unauthenticated,
-            AutheticationStatus.authenticated
+          emitsInOrder(<AuthenticationStatus>[
+            AuthenticationStatus.unauthenticated,
+            AuthenticationStatus.authenticated
           ]));
       await authenticationRepository.logIn(
           username: 'username', password: 'password');
@@ -30,10 +30,10 @@ void main() {
     test('logOut emits unauthenticated', () async {
       expectLater(
           authenticationRepository.status,
-          emitsInOrder(<AutheticationStatus>[
-            AutheticationStatus.unauthenticated,
-            AutheticationStatus.authenticated,
-            AutheticationStatus.unauthenticated
+          emitsInOrder(<AuthenticationStatus>[
+            AuthenticationStatus.unauthenticated,
+            AuthenticationStatus.authenticated,
+            AuthenticationStatus.unauthenticated
           ]));
       await authenticationRepository.logIn(
           username: 'username', password: 'password');
