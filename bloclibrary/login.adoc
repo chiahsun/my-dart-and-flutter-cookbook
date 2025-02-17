@@ -1,0 +1,19 @@
+
+==== https://bloclibrary.dev/tutorials/flutter-login/[Example: Login]
+
+[source,bash]
+flutter create --platforms=web login
+
+[source,dart]
+----
+test('initial state is unknown', () async {
+    expectLater(
+        authenticationRepository.status,
+        emitsInOrder(
+            <AutheticationStatus>[AutheticationStatus.unauthenticated]));
+});
+----
+
+
+[source,bash]
+flutter pub add equatable uuid
